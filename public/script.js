@@ -1,13 +1,13 @@
-const showBands = async () => {
-  let response = "";
-  let bandJSON = "";
-  const bandContainer = document.getElementById("band-list");
+const getBands = async () => {
   try {
-    response = await fetch("http://localhost:3000/api/bands");
-    bandJSON = await response.json();
+    return (await fetch("http://localhost:3000/api/bands")).json();
   } catch (error) {
     console.log(error);
   }
+};
+const showBands = async () => {
+  const bandContainer = document.getElementById("band-list");
+  const bandJSON = await getBands();
 
   bandJSON.forEach((band) => {
     const section = document.createElement("section");
