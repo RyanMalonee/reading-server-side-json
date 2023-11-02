@@ -35,7 +35,10 @@ const showBands = async () => {
 
     const topSongs = document.createElement("p");
     section.append(topSongs);
-    topSongs.innerHTML = "Top Songs: " + band.topSongs;
+    topSongs.innerHTML = "Top Songs: ";
+    band.topSongs.forEach((song) => {
+      topSongs.innerHTML += song + ", ";
+    });
 
     const country = document.createElement("p");
     section.append(country);
