@@ -1,6 +1,8 @@
 const getBands = async () => {
   try {
-    return (await fetch("http://localhost:3000/api/bands")).json();
+    return (
+      await fetch("https://reading-server-side-json.onrender.com/api/bands")
+    ).json();
   } catch (error) {
     console.log(error);
   }
@@ -16,7 +18,7 @@ const showBands = async () => {
 
     let img = document.createElement("img");
     section.append(img);
-    img.src = "http://localhost:3000/" + band.image;
+    img.src = "https://reading-server-side-json.onrender.com/" + band.image;
 
     const h3 = document.createElement("h3");
     section.append(h3);
