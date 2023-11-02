@@ -51,6 +51,5 @@ h1 {
 
   .column {
     flex: 1;
-    justify-content: space-between;
   }
 }
