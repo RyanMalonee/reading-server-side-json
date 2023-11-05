@@ -23,10 +23,10 @@ body {
 }
 
 .column {
-  padding: 10px;
+  padding: 15px 10px;
   background-color: var(--column);
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.6);
-  margin: 20px;
+  margin: 25px 20px;
   transition: border 0.5s;
   border: solid 3px transparent;
 }
