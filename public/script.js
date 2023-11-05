@@ -37,7 +37,11 @@ const showBands = async () => {
     section.append(topSongs);
     topSongs.innerHTML = "Top Songs: ";
     band.topSongs.forEach((song) => {
-      topSongs.innerHTML += song + ", ";
+      if (song == band.topSongs[band.topSongs.length - 1]) {
+        topSongs.innerHTML += song;
+      } else {
+        topSongs.innerHTML += song + ", ";
+      }
     });
 
     const country = document.createElement("p");
